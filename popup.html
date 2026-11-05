@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Noted</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icons/icon48.png" alt="" width="28" height="28" id="logo">
+    <h1 id="title">Noted</h1>
+  </header>
+
+  <div class="top">
+    <button id="add" class="primary">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg>
+      <span class="label">Add sticky note</span>
+      <kbd id="shortcut" title="Keyboard shortcut"></kbd>
+    </button>
+    <p id="blocked" class="blocked" hidden>Chrome doesn't allow notes on this page. Try a regular website, or reload the tab.</p>
+
+    <div class="tabs" role="tablist">
+      <button id="tab-page" role="tab" data-tab="page">This page <span id="count-page" class="count"></span></button>
+      <button id="tab-all" role="tab" data-tab="all">All notes <span id="count-all" class="count"></span></button>
+    </div>
+  </div>
+
+  <section id="list" class="list" role="tabpanel"></section>
+
+  <script src="popup.js"></script>
+</body>
+</html>
